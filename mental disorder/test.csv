@@ -1,0 +1,9 @@
+,Age,Gender,family_history,self_employed,benefits,care_options,anonymity,leave,work_interfere,treatment
+0,31,male,Yes,No,Don't know,No,Don't know,Very easy,Never,Normal 
+1,43,male,Yes,No,no,No,Don't know,Very difficult,Rarely,mental disorder
+2,34,male,Yes,no,yes,No,Don't know,Don't know,Sometimes,mental disorder
+3,36,male,Yes,no,no,yes,yes,Very easy,Often,mental disorder
+4,30,male,no,yes,no,Not sure,Don't know,Somewhat difficult,Often,mental disorder
+5,28,male,no,no,no,Not sure,Don't know,Somewhat easy,Don't know,Normal 
+6,24,male,no,no,Don't know,Not sure,Don't know,Don't know,Don't know,Normal 
+7,21,female,no,no,no,no,Don't know,Don't know,Don't know,Normal 

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> mental disorder
+detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+	<style>
+	body  {
+background-image: url("../static/img/sad7.jpg");
+background-color: #cccccc;
+}
+</style>
+</head>
+<body class = "background">
+
+     
+
+    <div class="login">
+	<h1> Mental disorder
+detection</h1>
+    <form action="{{ url_for('predict')}}"method="post">
+ <h1>  <label for="Age">Age</label></h1>
+   </br>
+ <input type="text" name="Age" placeholder="Age" required="required" /> 
+        
+		<h1> <label for="Gender">Gender</label></h1>
+		 </br>
+		 
+					<select style="width:430px;height:40px"  id="Gender" name="Gender" required="required" placeholder="Gender">
+						<option value="0">female</option>
+						<option value="1">male</option>
+						<option value="2">trans</option>
+						 
+					</select> 
+   <h1>  <label for="family_history">family_history</label></h1>
+	</br>
+   <select style="width:430px;height:40px" id="family_history" name="family_history" required="required" placeholder="family_history">
+						<option value="0">No</option>
+						<option value="1">Yes</option>
+						 
+						 
+					</select> 
+					
+  <h1>    <label for="self_employed">self_employed</label></h1> 
+	 </br>
+      
+	  <select style="width:430px;height:40px" id="self_employed" name="self_employed" required="required" placeholder="self_employed">
+						<option  value="0">No</option>
+						<option value="1">Yes</option>
+			 
+				</select> 
+			<h1> 	<label for="benefits">benefits</label></h1> 
+				</br>
+	  <select style="width:430px;height:40px" id="benefits" name="benefits" required="required" placeholder="benefits">
+	  
+						<option value="0">Don't know</option>
+						<option value="1">No</option>
+						<option value="2">Yes</option>
+						
+						</select> 
+					<h1> 	<label for="care_options">care_options</label></h1> 
+						</br>
+               
+			   <select style="width:430px;height:40px" id="care_options" name="care_options" required="required" placeholder="care_options">
+						<option value="0">No</option>
+						<option value="1">Not sure</option>
+						<option value="2">Yes</option>
+						
+						</select> 
+              
+			  	<h1> 	<label for="anonymity">anonymity</label></h1> 
+					</br>
+	  <select style="width:430px;height:40px" id="anonymity" name="anonymity" required="required" placeholder="anonymity">
+						<option value="0">Don't know</option>
+						<option value="1">No</option>
+						<option value="2">Yes</option>
+						
+						</select> 
+        <h1>      <label for="leave">leave</label></h1> 
+			 </br>
+			  <select style="width:430px;height:40px" id="leave" name="leave" required="required" placeholder="leave">
+						<option value="0">Don't know</option>
+						<option value="1">somewhat difficult</option>
+						<option value="2">Somewhat easy</option>
+						<option value="3">Very difficult</option>
+						<option value="4">Very easy</option>
+						
+						</select> 
+      <h1>       <label for="work_interfere">work_interfere</label></h1> 
+			</br>
+			    <select style="width:430px;height:40px"id="work_interfere" name="work_interfere" required="required" placeholder="work_interfere">
+						<option value="0">Don't know</option>
+						<option value="1">Never</option>
+						<option value="2">Often</option>
+						<option value="3">Rarely</option>
+						<option value="4">Sometimes</option>
+						
+						</select> </br></br>
+             
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+   <br>
+   <br>
+  <h1>Prediction is {{ prediction_text }}</h1> 
+  <br>
+  <br>
+<a href="{{ url_for('chart')}}"><button type="submit" class="btn btn-primary btn-block btn-large">Analysis</button></a>
+ </div>
+  
+</body>
+</html>

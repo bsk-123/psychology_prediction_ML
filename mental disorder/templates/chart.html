@@ -1,0 +1,38 @@
+<html>
+   <head>
+    <center>  <title><h1> Finding Psychological Instability Using Machine Learning</h1></title> </center>
+      <script type = "text/javascript" src = "https://www.gstatic.com/charts/loader.js">
+      </script>
+      <script type = "text/javascript">
+         google.charts.load('current', {packages: ['corechart']});     
+      </script>
+   </head>
+   
+   <body>
+      <div id = "container" style = "width: 550px; height: 400px; margin: 0 auto">
+      </div>
+      <script language = "JavaScript">
+         function drawChart() {
+            // Define the chart to be drawn.
+            var data = google.visualization.arrayToDataTable([
+               ['Gender', 'Mental disorder'],
+               ['TRANS',  700],
+               ['FEMALE',  500],
+               ['MALE',  300]
+               
+            ]);
+
+            var options = {title: 'Mental disorder'}; 
+
+            // Instantiate and draw the chart.
+            var chart = new google.visualization.BarChart(document.getElementById('container'));
+            chart.draw(data, options);
+         }
+         google.charts.setOnLoadCallback(drawChart);
+		 
+      </script>
+	 
+   </body>
+   
+	<a href="{{url_for('future')}}"><button type="submit" style="background-color:blue;color:white;width:150px;height:40px;">FUTURE</button></a>
+</html>
